@@ -12,6 +12,9 @@
 		"require": "./dist/index.cjs",
 		"types": "./dist/index.d.ts"
 	},
+	"files": [
+		"dist/"
+	],
 	"homepage": "https://github.com/snowcrystals/icicle",
 	"scripts": {
 		"build": "tsup src",
