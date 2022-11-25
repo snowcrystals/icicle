@@ -4,10 +4,17 @@
 	"description": "The bridge between code and terminal to print beautiful messages 🎨",
 	"author": "ijsKoud <github@ijskoud.dev>",
 	"license": "MIT",
-	"type": "module",
+	"main": "dist/index.cjs",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		"import": "./dist/index.js",
+		"require": "./dist/index.cjs",
+		"types": "./dist/index.d.ts"
+	},
 	"homepage": "https://github.com/snowcrystals/icicle",
 	"scripts": {
-		"build": "tsc --build",
+		"build": "tsup src",
 		"build:watch": "tsc --watch",
 		"start:dev": "nodemon ./dist",
 		"start": "node ./dist",
@@ -39,6 +46,7 @@
 		"lint-staged": "^13.0.4",
 		"pinst": "^3.0.0",
 		"prettier": "^2.8.0",
+		"tsup": "^6.5.0",
 		"typescript": "4.9.3"
 	},
 	"engines": {
@@ -47,5 +55,5 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"packageManager": "yarn@3.3.0",
+	"packageManager": "yarn@3.3.0"
 }
