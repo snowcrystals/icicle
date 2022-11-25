@@ -44,7 +44,7 @@ jobs:
           TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')
           yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
           yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
-          yarn bump -n "@snowcrystal/${{ github.event.inputs.repo }}" --preid "${TAG}.$(git rev-parse --verify --short HEAD)"
+          yarn bump -n "@${{ github.repository }}" -p . --preid "${TAG}.$(git rev-parse --verify --short HEAD)"
           yarn npm publish --tag ${TAG}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
