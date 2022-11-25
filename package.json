@@ -1,22 +1,24 @@
 {
-	"name": "template",
+	"name": "@snowcrystals/icicle",
 	"version": "1.0.0",
-	"description": "A template used for every single repository in this organization 📏",
+	"description": "The bridge between code and terminal to print beautiful messages 🎨",
 	"author": "ijsKoud <github@ijskoud.dev>",
 	"license": "MIT",
 	"type": "module",
-	"homepage": "https://github.com/snowcrystals/template",
+	"homepage": "https://github.com/snowcrystals/icicle",
 	"scripts": {
 		"build": "tsc --build",
 		"build:watch": "tsc --watch",
 		"start:dev": "nodemon ./dist",
 		"start": "node ./dist",
 		"lint": "eslint src",
-		"postinstall": "is-ci || husky install"
+		"postinstall": "is-ci || husky install",
+		"bump": "cliff-jumper"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.3.0",
 		"@commitlint/config-angular": "^17.3.0",
+		"@favware/cliff-jumper": "^1.9.0",
 		"@sapphire/eslint-config": "^4.3.8",
 		"@sapphire/prettier-config": "^1.4.4",
 		"@sapphire/ts-config": "^3.3.4",
