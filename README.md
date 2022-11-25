@@ -7,7 +7,7 @@
   <p align="center">
     <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg" />
     <a href="/LICENSE" target="_blank">
-      <img alt="License: None" src="https://img.shields.io/badge/License-None-yellow.svg" />
+      <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
     </a>
   </p>
 
@@ -20,13 +20,22 @@
 
 ## Information
 
-Just a template, like an uncolored drawing. That's all. ✏️
+@snowcrystals/icicle is a logger package which you can use to print beautiful messages in the console. Apart from serving as a logger is also has a couple customisable settings, to learn more about that [click here](#options)
 
 ## Install
 
-To use this template, you will need the following: `yarn` and `node >= 16.18.1`.
+```
+npm i @snowcrystals/icicle
+yarn add @snowcrystals/icicle
+```
 
+The following example is written using TypeScript.
+```ts
+import { Logger } from "@snowcrystals/icicle";
+const icicle = new Logger();
+icicle.info("Hello World!"); // 2022-11-25 20:18:33 INFO  Hello World!
 
+./github/readme_extension.md
 
 ## Author
 
@@ -43,6 +52,6 @@ This will always be open source project, even if I don't receive donations. But 
 
 ## License
 
-Project is licensed under the © [**None License**](/LICENSE)
+Project is licensed under the © [**MIT License**](/LICENSE)
 
 ---
