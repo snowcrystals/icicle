@@ -24,6 +24,9 @@ jobs:
       - name: Install Dependencies
         run: yarn --immutable
 
+      - name: Building the app
+        run: yarn build
+
       - name: Bump Version & Publish
         run: |
           yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
