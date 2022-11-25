@@ -424,6 +424,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sapphire/timestamp@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@sapphire/timestamp@npm:1.0.0"
+  checksum: 2852210825626431cb7aee4da9cd04518778854f5b9e8eafc0fa0a57d499251030ad115f0d0c58e15e5b176cfb495301df7418d95e51c4826e9fadc09ff98bbb
+  languageName: node
+  linkType: hard
+
 "@sapphire/ts-config@npm:^3.3.4":
   version: 3.3.4
   resolution: "@sapphire/ts-config@npm:3.3.4"
@@ -450,6 +457,7 @@ __metadata:
     "@favware/cliff-jumper": ^1.9.0
     "@sapphire/eslint-config": ^4.3.8
     "@sapphire/prettier-config": ^1.4.4
+    "@sapphire/timestamp": ^1.0.0
     "@sapphire/ts-config": ^3.3.4
     "@types/node": ^18.11.9
     "@typescript-eslint/eslint-plugin": ^5.44.0

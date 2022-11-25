@@ -17,6 +17,10 @@
 		"prepack": "pinst --disable",
 		"postpack": "pinst --enable"
 	},
+	"dependencies": {
+		"@sapphire/timestamp": "^1.0.0",
+		"colorette": "^2.0.19"
+	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.3.0",
 		"@commitlint/config-angular": "^17.3.0",
@@ -44,7 +48,4 @@
 		"access": "public"
 	},
 	"packageManager": "yarn@3.3.0",
-	"dependencies": {
-		"colorette": "^2.0.19"
-	}
 }
