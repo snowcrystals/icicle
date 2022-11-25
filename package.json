@@ -4,16 +4,29 @@
 	"description": "The bridge between code and terminal to print beautiful messages 🎨",
 	"author": "ijsKoud <github@ijskoud.dev>",
 	"license": "MIT",
-	"type": "module",
+	"main": "dist/index.cjs",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		"import": "./dist/index.js",
+		"require": "./dist/index.cjs",
+		"types": "./dist/index.d.ts"
+	},
 	"homepage": "https://github.com/snowcrystals/icicle",
 	"scripts": {
-		"build": "tsc --build",
+		"build": "tsup src",
 		"build:watch": "tsc --watch",
 		"start:dev": "nodemon ./dist",
 		"start": "node ./dist",
 		"lint": "eslint src",
 		"postinstall": "is-ci || husky install",
-		"bump": "cliff-jumper"
+		"bump": "cliff-jumper",
+		"prepack": "pinst --disable",
+		"postpack": "pinst --enable"
+	},
+	"dependencies": {
+		"@sapphire/timestamp": "^1.0.0",
+		"colorette": "^2.0.19"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.3.0",
@@ -31,14 +44,16 @@
 		"husky": "^8.0.2",
 		"is-ci": "^3.0.1",
 		"lint-staged": "^13.0.4",
+		"pinst": "^3.0.0",
 		"prettier": "^2.8.0",
+		"tsup": "^6.5.0",
 		"typescript": "4.9.3"
 	},
 	"engines": {
 		"node": ">= v16.18.1"
 	},
 	"publishConfig": {
-    		"access": "public"
-  	},
+		"access": "public"
+	},
 	"packageManager": "yarn@3.3.0"
 }
