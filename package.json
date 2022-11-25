@@ -1,11 +1,11 @@
 {
-	"name": "template",
+	"name": "@snowcrystals/icicle",
 	"version": "1.0.0",
-	"description": "A template used for every single repository in this organization 📏",
+	"description": "The bridge between code and terminal to print beautiful messages 🎨",
 	"author": "ijsKoud <github@ijskoud.dev>",
 	"license": "MIT",
 	"type": "module",
-	"homepage": "https://github.com/snowcrystals/template",
+	"homepage": "https://github.com/snowcrystals/icicle",
 	"scripts": {
 		"build": "tsc --build",
 		"build:watch": "tsc --watch",

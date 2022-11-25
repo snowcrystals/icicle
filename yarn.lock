@@ -407,6 +407,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@snowcrystals/icicle@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@snowcrystals/icicle@workspace:."
+  dependencies:
+    "@commitlint/cli": ^17.3.0
+    "@commitlint/config-angular": ^17.3.0
+    "@sapphire/eslint-config": ^4.3.8
+    "@sapphire/prettier-config": ^1.4.4
+    "@sapphire/ts-config": ^3.3.4
+    "@types/node": ^18.11.9
+    "@typescript-eslint/eslint-plugin": ^5.44.0
+    "@typescript-eslint/parser": ^5.44.0
+    eslint: ^8.28.0
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-prettier: ^4.2.1
+    husky: ^8.0.2
+    is-ci: ^3.0.1
+    lint-staged: ^13.0.4
+    prettier: ^2.8.0
+    typescript: 4.9.3
+  languageName: unknown
+  linkType: soft
+
 "@tsconfig/node10@npm:^1.0.7":
   version: 1.0.9
   resolution: "@tsconfig/node10@npm:1.0.9"
@@ -3131,29 +3154,6 @@ __metadata:
   checksum: 53b1e247e68e05db7b3808b99b892bd36fb096e6fba213a06da7fab22045e97597db425c724f2bbd6c99a3c295e1e73f3e4de78592289f38431049e1277ca0ae
   languageName: node
   linkType: hard
-
-"template@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "template@workspace:."
-  dependencies:
-    "@commitlint/cli": ^17.3.0
-    "@commitlint/config-angular": ^17.3.0
-    "@sapphire/eslint-config": ^4.3.8
-    "@sapphire/prettier-config": ^1.4.4
-    "@sapphire/ts-config": ^3.3.4
-    "@types/node": ^18.11.9
-    "@typescript-eslint/eslint-plugin": ^5.44.0
-    "@typescript-eslint/parser": ^5.44.0
-    eslint: ^8.28.0
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-prettier: ^4.2.1
-    husky: ^8.0.2
-    is-ci: ^3.0.1
-    lint-staged: ^13.0.4
-    prettier: ^2.8.0
-    typescript: 4.9.3
-  languageName: unknown
-  linkType: soft
 
 "text-extensions@npm:^1.0.0":
   version: 1.9.0
