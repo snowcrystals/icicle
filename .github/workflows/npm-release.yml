@@ -1,0 +1,33 @@
+name: "cd(NPM): update on new release"
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  Publish:
+    if: github.repository != 'snowcrystals/template'
+    name: Publish Next to npm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v3
+
+      - name: Use Node.js v16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: yarn
+          registry-url: https://registry.yarnpkg.com/
+
+      - name: Install Dependencies
+        run: yarn --immutable
+
+      - name: Bump Version & Publish
+        run: |
+          yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
+          yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
+          yarn npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
