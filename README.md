@@ -5,7 +5,7 @@
   <p>The bridge between code and terminal to print beautiful messages 🎨</p>
   
   <p align="center">
-    <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg" />
+    <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-blue.svg" />
     <a href="/LICENSE" target="_blank">
       <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
     </a>
@@ -24,10 +24,33 @@
 
 ## Install
 
-```,npm i @snowcrystals/icicle,yarn add @snowcrystals/icicle,```
-,The following example is written using TypeScript.,```ts,import { Logger } from "@snowcrystals/icicle";,const icicle = new Logger();,icicle.info("Hello World!"); // 2022-11-25 20:18:33 INFO  Hello World!,```
+```
+npm i @snowcrystals/icicle
+yarn add @snowcrystals/icicle
+```
 
-.github/readme_extension.md
+The following example is written using TypeScript.
+```ts
+import { Logger } from "@snowcrystals/icicle";
+const icicle = new Logger();
+icicle.info("Hello World!"); // 2022-11-25 20:18:33 INFO  Hello World!
+```
+
+## Options
+
+The following options apply to the `Logger` class.
+
+| Property      | Value               | Required | Description                                                                                                                                |
+| ------------- | ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| console       | Console             | false    | The Console for the logs.                                                                                                                  |
+| stdout        | NodeJS.WriteStream  | false    | The WriteStream for the output logs.                                                                                                       |
+| stderr        | NodeJS.WriteStream  | false    | A WriteStream for the error logs.                                                                                                          |
+| defaultFormat | LoggerLevelOptions  | false    | The default options used to fill all the possible values for Format.                                                                       |
+| format        | LoggerFormatOptions | false    | The options for each log level. LogLevel.None serves to set the default for all keys, where only TimeStamp and Prefix would be overridden. |
+| level         | LogLevel            | false    | The minimum log level.                                                                                                                     |
+| join          | string              | false    | The string that joins different messages.                                                                                                  |
+| depth         | number              | false    | The inspect depth when logging objects.                                                                                                    |
+
 
 ## Author
 
