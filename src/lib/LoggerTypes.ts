@@ -1,6 +1,6 @@
 import type * as colorette from "colorette";
 
-export const enum LogLevel {
+export enum LogLevel {
 	/**
 	 * The lowest log level, used when calling {@link ILogger.trace}.
 	 */
@@ -232,7 +232,7 @@ export type LoggerStyleResolvable = colorette.Color | LoggerStyleOptions;
 /**
  * The text styles.
  */
-export const enum LoggerStyleEffect {
+export enum LoggerStyleEffect {
 	Reset = "reset",
 	Bold = "bold",
 	Dim = "dim",
@@ -246,7 +246,7 @@ export const enum LoggerStyleEffect {
 /**
  * The text colors.
  */
-export const enum LoggerStyleText {
+export enum LoggerStyleText {
 	Black = "black",
 	Red = "red",
 	Green = "green",
@@ -269,7 +269,7 @@ export const enum LoggerStyleText {
 /**
  * The background colors.
  */
-export const enum LoggerStyleBackground {
+export enum LoggerStyleBackground {
 	Black = "bgBlack",
 	Red = "bgRed",
 	Green = "bgGreen",
