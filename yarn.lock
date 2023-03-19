@@ -640,10 +640,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/timestamp@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@sapphire/timestamp@npm:1.0.0"
-  checksum: 2852210825626431cb7aee4da9cd04518778854f5b9e8eafc0fa0a57d499251030ad115f0d0c58e15e5b176cfb495301df7418d95e51c4826e9fadc09ff98bbb
+"@sapphire/timestamp@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@sapphire/timestamp@npm:1.0.1"
+  checksum: 40320946cb8fcbbb610b94019882eb39c900b9af87e4a2d173299efaa062921662d950780c273fd44f4ec9877983d725d28f0b999314f338f3bfc0ab3c45a8cb
   languageName: node
   linkType: hard
 
@@ -673,9 +673,9 @@ __metadata:
     "@favware/cliff-jumper": ^2.0.0
     "@sapphire/eslint-config": ^4.3.8
     "@sapphire/prettier-config": ^1.4.5
-    "@sapphire/timestamp": ^1.0.0
+    "@sapphire/timestamp": ^1.0.1
     "@sapphire/ts-config": ^3.3.4
-    "@types/node": ^18.15.2
+    "@types/node": ^18.15.3
     "@typescript-eslint/eslint-plugin": ^5.55.0
     "@typescript-eslint/parser": ^5.55.0
     colorette: ^2.0.19
@@ -748,10 +748,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.15.2":
-  version: 18.15.2
-  resolution: "@types/node@npm:18.15.2"
-  checksum: 6db83062d295f9da63e7b24477f734b497170a577b21e0c13637d6f355d53713f875536e52ff02938221330d919700b5ed787dc493e32624a3ecb6c86105cfc8
+"@types/node@npm:^18.15.3":
+  version: 18.15.3
+  resolution: "@types/node@npm:18.15.3"
+  checksum: 31b1d92475a82c30de29aa6c0771b18a276552d191283b4423ba2d61b3f01159bf0d02576c0b7cc834b043997893800db6bb47f246083ed85aa45e79c80875d7
   languageName: node
   linkType: hard
 
