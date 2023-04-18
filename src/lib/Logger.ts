@@ -1,11 +1,11 @@
 /**
  * Build from https://github.com/sapphiredev/plugins/tree/main/packages/logger and https://github.com/ijsKoud/sapphire-logger
  */
-import { bgRed, dim, magenta, isColorSupported, red, white, yellow, Color, blue } from "colorette";
+import { bgRed, dim, magenta, isColorSupported, red, white, yellow, type Color, blue } from "colorette";
 import { Console } from "console";
-import { inspect, InspectOptions } from "util";
+import { inspect, type InspectOptions } from "util";
 import { LoggerLevel } from "./LoggerLevel.js";
-import { LoggerFormatOptions, LoggerLevelOptions, LoggerOptions, LogLevel, LogMethods } from "./LoggerTypes.js";
+import { type LoggerFormatOptions, type LoggerLevelOptions, type LoggerOptions, LogLevel, type LogMethods } from "./LoggerTypes.js";
 
 /**
  * The logger class.
