@@ -1,6 +1,6 @@
 {
 	"name": "@snowcrystals/icicle",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "The bridge between code and terminal to print beautiful messages 🎨",
 	"author": "ijsKoud <github@ijskoud.dev>",
 	"license": "MIT",
