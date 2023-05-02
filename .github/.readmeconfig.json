@@ -1,5 +1,5 @@
 {
-	"project.version": "1.0.4",
+	"project.version": "2.0.0",
 	"project.information": "@snowcrystals/icicle is a logger package which you can use to print beautiful messages in the console. Apart from serving as a logger is also has a couple customisable settings, to learn more about that [click here](#options)",
 	"project.installation": [
 		"```",
