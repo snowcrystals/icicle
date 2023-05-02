@@ -1,5 +1,6 @@
-export * from "./lib/Logger.js";
-export * from "./lib/LoggerLevel.js";
-export * from "./lib/LoggerStyle.js";
-export * from "./lib/LoggerTimestamp.js";
-export * from "./lib/LoggerTypes.js";
+export * from "./types.js";
+export * from "./Logger.js";
+
+import { Logger } from "./Logger.js";
+const logger = new Logger({ name: "SERVER" });
+logger.info("Hello World!");
