@@ -23,11 +23,7 @@ export class Logger {
 	/** The minimum log level */
 	public level: LogLevel;
 
-	protected parser: MessageParser;
-
-	protected timestamp: TimeStamp;
-
-	protected readonly levels = new Map<LogLevel, LogMethods>([
+	public readonly levels = new Map<LogLevel, LogMethods>([
 		[LogLevel.Trace, "trace"],
 		[LogLevel.Debug, "debug"],
 		[LogLevel.Info, "info"],
@@ -36,9 +32,12 @@ export class Logger {
 		[LogLevel.Fatal, "error"]
 	]);
 
+	protected parser: MessageParser;
+	protected timestamp: TimeStamp;
+
 	protected readonly styles: Map<LogLevel, LoggerStyles>;
 
-	public constructor(options: LoggerOptions) {
+	public constructor(options: LoggerOptions = {}) {
 		this.console = new Console(options.stdout ?? process.stdout, options.stderr ?? process.stderr);
 
 		this.name = options.name;
