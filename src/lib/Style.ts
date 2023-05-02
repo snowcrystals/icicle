@@ -1,16 +1,15 @@
 import * as Colorette from "colorette";
-import type { LoggerStyleResolvable } from "./LoggerTypes.js";
+import type { LoggerStyleResolvable } from "../types.js";
 
 /**
- * Logger utility that applies a style to a string.
+ * utility class that applies a style to a string
  */
-export class LoggerStyle {
+export class Style {
 	public readonly style: Colorette.Color;
 
 	public constructor(resolvable: LoggerStyleResolvable = {}) {
-		if (typeof resolvable === "function") {
-			this.style = resolvable;
-		} else {
+		if (typeof resolvable === "function") this.style = resolvable;
+		else {
 			const styles: Colorette.Color[] = [];
 			if (resolvable.effects) styles.push(...resolvable.effects.map((text) => Colorette[text]));
 			if (resolvable.text) styles.push(Colorette[resolvable.text]);
@@ -25,10 +24,10 @@ export class LoggerStyle {
 	}
 
 	/**
-	 * Applies the style to a string.
-	 * @param string The value to apply the style to.
+	 * Applies the style to a string
+	 * @param string The value to apply the style to
 	 */
-	public run(string: string | number) {
+	public run(string: string | number): string {
 		return this.style(string);
 	}
 }

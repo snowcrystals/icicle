@@ -1,12 +1,12 @@
 import { Timestamp } from "@sapphire/timestamp";
-import * as colorrete from "colorette";
-import { LoggerStyle } from "./LoggerStyle.js";
-import type { LoggerTimestampFormatter, LoggerTimestampOptions } from "./LoggerTypes.js";
+import type { LoggerTimestampOptions } from "../types.js";
+import * as colorette from "colorette";
+import { Style } from "./Style.js";
 
 /**
  * Logger utility that formats a timestamp.
  */
-export class LoggerTimestamp {
+export class TimeStamp {
 	/**
 	 * The timestamp used to format the current date.
 	 */
@@ -20,26 +20,28 @@ export class LoggerTimestamp {
 	/**
 	 * The logger style to apply the color to the timestamp.
 	 */
-	public color: LoggerStyle | null;
+	public color: Style;
 
 	/**
 	 * The final formatter.
 	 */
-	public formatter: LoggerTimestampFormatter;
+	public formatter: (timestamp: string) => string;
 
 	public constructor(options: LoggerTimestampOptions = {}) {
 		this.timestamp = new Timestamp(options.pattern ?? "YYYY-MM-DD HH:mm:ss");
-		this.utc = options.utc ?? false;
-		this.color = options.color === null ? new LoggerStyle(colorrete.gray) : new LoggerStyle(options.color);
+		this.color = options.color ? new Style(options.color) : new Style(colorette.gray);
 		this.formatter = options.formatter ?? ((timestamp) => `${timestamp} `);
+		this.utc = options.utc ?? false;
 	}
 
 	/**
-	 * Formats the current time.
+	 * Formats the current time
 	 */
-	public run() {
+	public run(): string {
 		const date = new Date();
 		const result = this.utc ? this.timestamp.displayUTC(date) : this.timestamp.display(date);
-		return this.formatter(this.color ? this.color.run(result) : result);
+		const colored = this.color ? this.color.run(result) : result;
+
+		return this.formatter(colored);
 	}
 }
