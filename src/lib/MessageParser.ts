@@ -7,16 +7,18 @@ import { isColorSupported } from "colorette";
  */
 export class MessageParser {
 	/** The string that joins different messages */
-	public join: string;
+	public readonly join: string;
 
-	/**
-	 * The inspect depth when logging objects
-	 */
-	public depth: number;
+	/** The inspect depth when logging objects */
+	public readonly depth: number;
 
-	public constructor(options: MessageParserOptions) {
+	/** Whether colored output is allowed or not */
+	public readonly color: boolean;
+
+	public constructor(options: MessageParserOptions = {}) {
 		this.join = options.join ?? " ";
 		this.depth = options.depth ?? 0;
+		this.color = options.color ?? isColorSupported;
 	}
 
 	/**
@@ -24,7 +26,7 @@ export class MessageParser {
 	 * @param values The values to parse
 	 */
 	public parse(...values: readonly unknown[]): string {
-		const inspectOptions: InspectOptions = { colors: isColorSupported, depth: this.depth };
+		const inspectOptions: InspectOptions = { colors: this.color, depth: this.depth };
 		return values.map((value) => (typeof value === "string" ? value : inspect(value, inspectOptions))).join(this.join);
 	}
 }

@@ -1,5 +1,5 @@
 import type * as Colorette from "colorette";
-import type { Style } from "./lib/Style.js";
+import { Style } from "./lib/Style.js";
 
 export enum LogLevel {
 	/**
@@ -118,6 +118,12 @@ export interface MessageParserOptions {
 	 * @default 0
 	 */
 	depth?: number;
+
+	/**
+	 * Optionally enable/disable the output of colored text
+	 * @default colorette.isColorSupported
+	 */
+	color?: boolean;
 }
 
 export interface LoggerTimestampOptions {
@@ -149,7 +155,7 @@ export interface LoggerTimestampOptions {
 	 * The color to use.
 	 * @default colorette.gray
 	 */
-	color?: LoggerStyleOptions;
+	color?: LoggerStyleResolvable;
 }
 
 /**

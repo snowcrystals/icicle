@@ -43,7 +43,7 @@ export class Logger {
 		this.name = options.name;
 		this.level = options.level ?? LogLevel.Info;
 
-		this.parser = new MessageParser(options.parser ?? {});
+		this.parser = new MessageParser(options.parser);
 		this.timestamp = new TimeStamp(options.timestamp);
 
 		this.styles = this.generateLevelStyleMap(options.styles);
