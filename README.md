@@ -20,7 +20,7 @@
 
 ## Information
 
-@snowcrystals/icicle is a logger package which you can use to print beautiful messages in the console. Apart from serving as a logger is also has a couple customisable settings, to learn more about that [click here](#options)
+@snowcrystals/icicle is a logger package which you can use to print beautiful messages in the console. Apart from serving as a logger is also has a couple customisable settings.
 
 ## Install
 
@@ -33,7 +33,7 @@ The following example is written using TypeScript.
 ```ts
 import { Logger } from "@snowcrystals/icicle";
 const icicle = new Logger();
-icicle.info("Hello World!"); // 2022-11-25 20:18:33 INFO  Hello World!
+icicle.info("Hello World!"); // 2022-11-25 20:18:33 [INFO] » Hello World!
 ```
 
 ## Options
