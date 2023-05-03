@@ -97,13 +97,13 @@ jobs:
         env:
           SEMVER: ${{ env.NAME }}
         run: |
-          mkdir -p out/${{ env.REPOSITORY }}
+          mkdir -p out/docs/${{ env.REPOSITORY }}
           mv docs/api.json out/docs/${{ env.REPOSITORY }}/${SEMVER}.json
 
       - name: Move Documentation
         if: ${{ env.TYPE == 'branch' }}
         run: |
-          mkdir -p out/${{ env.REPOSITORY }}
+          mkdir -p out/docs/${{ env.REPOSITORY }}
           mv docs/api.json out/docs/${{ env.REPOSITORY }}/${NAME}.json
 
       - name: Commit & Push
