@@ -1,6 +1,6 @@
 {
 	"project.version": "2.0.0",
-	"project.information": "@snowcrystals/icicle is a logger package which you can use to print beautiful messages in the console. Apart from serving as a logger is also has a couple customisable settings, to learn more about that [click here](#options)",
+	"project.information": "@snowcrystals/icicle is a logger package which you can use to print beautiful messages in the console. Apart from serving as a logger is also has a couple customisable settings.",
 	"project.installation": [
 		"```",
 		"npm i @snowcrystals/icicle",
@@ -10,7 +10,7 @@
 		"```ts",
 		"import { Logger } from \"@snowcrystals/icicle\";",
 		"const icicle = new Logger();",
-		"icicle.info(\"Hello World!\"); // 2022-11-25 20:18:33 INFO  Hello World!",
+		"icicle.info(\"Hello World!\"); // 2022-11-25 20:18:33 [INFO] » Hello World!",
 		"```"
 	],
 	"project.icon": "https://raw.githubusercontent.com/snowcrystals/.github/main/logo.png",
