@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  REPOSITORY: ${{ github.github.event.repository.name }}
+  REPOSITORY: ${{ github.event.repository.name }}
 
 jobs:
   build:
