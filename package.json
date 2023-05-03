@@ -22,6 +22,7 @@
 		"start": "node ./dist",
 		"lint": "eslint src",
 		"test": "vitest run",
+		"docs": "typedoc-json-parser",
 		"postinstall": "is-ci || husky install",
 		"bump": "cliff-jumper",
 		"prepack": "pinst --disable",
@@ -50,6 +51,8 @@
 		"pinst": "^3.0.0",
 		"prettier": "^2.8.8",
 		"tsup": "^6.7.0",
+		"typedoc": "^0.24.6",
+		"typedoc-json-parser": "^7.4.0",
 		"typescript": "5.0.4",
 		"vitest": "^0.30.1"
 	},
