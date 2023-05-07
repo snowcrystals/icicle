@@ -8,6 +8,7 @@ export default defineConfig({
 	skipNodeModulesBundle: true,
 	sourcemap: true,
 	target: "es2020",
+	dts: true,
 	tsconfig: "tsconfig.build.json",
 	keepNames: true,
 	treeshake: true,
