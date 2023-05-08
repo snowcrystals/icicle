@@ -1,6 +1,6 @@
 {
 	"project.version": "2.0.1",
-	"project.information": "@snowcrystals/icicle is a logger package which you can use to print beautiful messages in the console. Apart from serving as a logger is also has a couple customisable settings.",
+	"project.information": "@snowcrystals/icicle is a logger package which you can use to print beautiful messages in the console. Apart from serving as a basic logger it also has a couple customisable settings.",
 	"project.installation": [
 		"```",
 		"npm i @snowcrystals/icicle",
