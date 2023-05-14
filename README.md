@@ -47,7 +47,7 @@ icicle.info("Hello World!"); // 2022-11-25 20:18:33 [INFO] » Hello World!
 
 ### Documentation
 
-The documentation (API Reference) can be found on our [website](https://snowcrystals.dev/docs/iglo)
+The documentation (API Reference) can be found on our [website](https://snowcrystals.dev/docs/icicle)
 
 
 ## Author
