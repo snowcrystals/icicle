@@ -6,7 +6,7 @@
 		"npm i @snowcrystals/icicle",
 		"yarn add @snowcrystals/icicle",
 		"```\n",
-		"The following example is written using TypeScript.",
+		"The following example is written using TypeScript, check the documentation for more information.",
 		"```ts",
 		"import { Logger } from \"@snowcrystals/icicle\";",
 		"const icicle = new Logger();",
