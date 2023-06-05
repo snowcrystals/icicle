@@ -116,7 +116,7 @@ export class Logger {
 		const method = this.levels.get(level) ?? "log";
 
 		const styles = this.styles.get(level)!;
-		const styledLevel = styles.level.run(`[${LogLevel[level].toUpperCase()}]`).padEnd(7, " ");
+		const styledLevel = styles.level.run(`[${LogLevel[level].toUpperCase()}]`.padEnd(7, " "));
 
 		const processed = this.process(parsed, styledLevel, styles.message);
 		this.console[method](processed);
