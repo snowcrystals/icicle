@@ -1,0 +1,20 @@
+[project]
+icon = "https://raw.githubusercontent.com/snowcrystals/.github/main/logo.png"
+icon_width = "100px"
+version = "2.0.4"
+
+[variables]
+information = "@snowcrystals/icicle is a logger package which you can use to print beautiful messages in the console. Apart from serving as a basic logger it also has a couple customisable settings."
+installation = [
+	"```",
+	"npm i @snowcrystals/icicle",
+	"yarn add @snowcrystals/icicle",
+	"```\n",
+	"The following example is written using TypeScript, check the documentation for more information.",
+	"```ts",
+	"import { Logger } from \"@snowcrystals/icicle\";",
+	"const icicle = new Logger();",
+	"icicle.info(\"Hello World!\"); // 2022-11-25 20:18:33 [INFO] » Hello World!",
+	"```"
+]
+examples = ".github/readme_extension.md"
