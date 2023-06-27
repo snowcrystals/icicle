@@ -15,6 +15,7 @@ installation = [
 	"import { Logger } from \"@snowcrystals/icicle\";",
 	"const icicle = new Logger();",
 	"icicle.info(\"Hello World!\"); // 2022-11-25 20:18:33 [INFO] » Hello World!",
-	"```"
+	"```",
+	"\n{variables.examples}"
 ]
 examples = ".github/readme_extension.md"
