@@ -5,7 +5,7 @@
 		"rootDir": "./src",
 		"noUnusedParameters": false,
 		"useUnknownInCatchVariables": false,
-		"module": "ESNext",
+		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
 		"composite": true,
 		"tsBuildInfoFile": ".tsbuildinfo"
