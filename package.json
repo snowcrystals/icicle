@@ -28,16 +28,17 @@
 		"prepack": "pinst --disable",
 		"postpack": "pinst --enable"
 	},
+	"resolutions": {
+		"load-tsconfig": "^0.2.5"
+	},
 	"dependencies": {
 		"@sapphire/timestamp": "^1.0.1",
 		"colorette": "^2.0.20"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^17.8.0",
-		"@commitlint/config-angular": "^17.8.0",
 		"@favware/cliff-jumper": "^2.2.0",
 		"@sapphire/eslint-config": "^5.0.2",
-		"@sapphire/ts-config": "^4.0.1",
+		"@sapphire/ts-config": "^5.0.0",
 		"@snowcrystals/prettier-config": "^1.0.0",
 		"@types/node": "^18.18.5",
 		"@typescript-eslint/eslint-plugin": "^6.7.5",
@@ -57,7 +58,7 @@
 		"vitest": "^0.34.6"
 	},
 	"engines": {
-		"node": ">= v16.20.0"
+		"node": ">= v18.16.x"
 	},
 	"publishConfig": {
 		"access": "public"
