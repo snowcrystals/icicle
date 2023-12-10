@@ -624,10 +624,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/timestamp@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@sapphire/timestamp@npm:1.0.1"
-  checksum: 03474e6bc32559c2528b4aa2e4966ec9647b7e0bb960126579cb4feadbdf654680747aa5edf7a8373a064ce13ebaef000ca4fa47a28ed4645cbd436d4d852362
+"@sapphire/timestamp@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@sapphire/timestamp@npm:1.0.2"
+  checksum: 54d1d2fd99e6ba64b7562942c484b1b78078ea7b4eed972d5ad29721bc39e57b0eb4e64537395e7f1d86f7f1f4a60a9ef090abff90cbd26cff1dbe7792706e8c
   languageName: node
   linkType: hard
 
@@ -661,7 +661,7 @@ __metadata:
   dependencies:
     "@favware/cliff-jumper": "npm:^2.2.3"
     "@sapphire/eslint-config": "npm:^5.0.3"
-    "@sapphire/timestamp": "npm:^1.0.1"
+    "@sapphire/timestamp": "npm:^1.0.2"
     "@sapphire/ts-config": "npm:^5.0.0"
     "@snowcrystals/prettier-config": "npm:^1.0.0"
     "@types/node": "npm:^20.10.4"
