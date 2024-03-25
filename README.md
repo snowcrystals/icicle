@@ -36,6 +36,7 @@
 ```
 npm i @snowcrystals/icicle
 yarn add @snowcrystals/icicle
+pnpm add @snowcrystals/icicle
 ```
 
 The following example is written using TypeScript, check the documentation for more information.
