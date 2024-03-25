@@ -25,26 +25,29 @@ jobs:
         with:
           ref: ${{ github.event.inputs.ref || 'main' }}
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
       - name: Use Node.js v18
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: yarn
-          registry-url: https://registry.yarnpkg.com/
+          cache: pnpm
 
       - name: Install Dependencies
-        run: yarn --immutable
+        run: pnpm install --frozen-lockfile
 
       - name: Building the app
-        run: yarn build
+        run: pnpm run build
 
       - name: Bump Version & Publish
         run: |
           # Resolve the tag to be used. "next" for push events, "pr-{prNumber}" for dispatch events.
           TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')
-          yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
-          yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
-          yarn bump -n "@${{ github.repository }}" -p . --preid "${TAG}.$(git rev-parse --verify --short HEAD)"
-          yarn npm publish --tag ${TAG}
+          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
+          pnpm run bump -n "@${{ github.repository }}" -p . --preid "${TAG}.$(git rev-parse --verify --short HEAD)"
+          pnpm publish --access public --no-git-checks --tag ${TAG}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}

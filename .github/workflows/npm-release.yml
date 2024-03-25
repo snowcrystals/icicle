@@ -14,23 +14,27 @@ jobs:
       - name: Checkout Project
         uses: actions/checkout@v4
 
-      - name: Use Node.js v18
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Install Node v18
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: yarn
-          registry-url: https://registry.yarnpkg.com/
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
 
       - name: Install Dependencies
-        run: yarn --immutable
+        run: pnpm install --frozen-lockfile
 
       - name: Building the app
-        run: yarn build
+        run: pnpm build
 
       - name: Bump Version & Publish
         run: |
-          yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
-          yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
-          yarn npm publish
+          echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > .npmrc
+          pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}

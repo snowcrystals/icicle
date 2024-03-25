@@ -30,18 +30,22 @@ jobs:
       - name: Checkout Project
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
       - name: Use Node.js v18
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: yarn
-          registry-url: https://registry.npmjs.org/
+          cache: pnpm
 
       - name: Install Dependencies
-        run: yarn --immutable
+        run: pnpm install --frozen-lockfile
 
       - name: Build Documentation
-        run: yarn docs
+        run: pnpm run docs
 
       - name: Upload Documentation Artifacts
         uses: actions/upload-artifact@v4
@@ -69,15 +73,19 @@ jobs:
       - name: Checkout Project
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
       - name: Use Node.js v18
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: yarn
-          registry-url: https://registry.yarnpkg.org/
+          cache: pnpm
 
       - name: Install Dependencies
-        run: yarn --immutable
+        run: pnpm install --frozen-lockfile
 
       - name: Download Documentation Artifacts
         uses: actions/download-artifact@v4

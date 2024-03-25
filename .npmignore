@@ -16,6 +16,7 @@ src
 .lintstagedrc.json
 .prettierrc.cjs
 renovate.json
+.npmrc
 
 # Build config
 tsconfig.eslint.json

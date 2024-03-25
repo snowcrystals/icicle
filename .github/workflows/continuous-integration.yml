@@ -13,14 +13,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
       - name: Install Node v18
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: yarn
+          cache: pnpm
 
       - name: Install Dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
   Building:
     runs-on: ubuntu-latest
@@ -29,17 +34,23 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
       - name: Install Node v18
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: yarn
+          cache: pnpm
 
       - name: Install Dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
       - name: Run Compiler
-        run: yarn run build
+        run: pnpm run build
+
   Linting:
     runs-on: ubuntu-latest
     needs: Dependencies
@@ -47,32 +58,43 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
       - name: Install Node v18
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: yarn
+          cache: pnpm
 
       - name: Install Dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
       - name: Run Eslint
-        run: yarn run lint
+        run: pnpm run lint
+
   Testing:
     runs-on: ubuntu-latest
     needs: Dependencies
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
 
       - name: Install Node v18
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: yarn
+          cache: pnpm
 
       - name: Install Dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
       - name: Run Vitest
-        run: yarn run test
+        run: pnpm run test
