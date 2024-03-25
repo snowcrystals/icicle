@@ -1,6 +1,8 @@
 import { inspect, type InspectOptions } from "node:util";
-import type { MessageParserOptions } from "../types.js";
+
 import { isColorSupported } from "colorette";
+
+import type { MessageParserOptions } from "../types.js";
 
 /**
  * Utility class for parsing log values

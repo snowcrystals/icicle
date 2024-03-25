@@ -1,5 +1,6 @@
-import { Style } from "../src/lib/Style.js";
 import { dim } from "colorette";
+
+import { Style } from "../src/lib/Style.js";
 
 function isClass(input: unknown) {
 	return typeof input === "function" && typeof input.prototype === "object";

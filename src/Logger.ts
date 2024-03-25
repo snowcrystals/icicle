@@ -1,17 +1,18 @@
-import { Console } from "console";
-import {
-	LogLevel,
-	type LoggerOptions,
-	type LogMethods,
-	type LoggerStyles,
-	type LevelStyleOptions,
-	type LoggerStyleOptions,
-	type LoggerStyleResolvable
-} from "./types.js";
-import { MessageParser } from "./lib/MessageParser.js";
 import { bgRed, blue, dim, isColorSupported, magenta, red, white, yellow } from "colorette";
-import { TimeStamp } from "./lib/TimeStamp.js";
+import { Console } from "console";
+
+import { MessageParser } from "./lib/MessageParser.js";
 import { Style } from "./lib/Style.js";
+import { TimeStamp } from "./lib/TimeStamp.js";
+import {
+	type LevelStyleOptions,
+	type LoggerOptions,
+	type LoggerStyleOptions,
+	type LoggerStyleResolvable,
+	type LoggerStyles,
+	LogLevel,
+	type LogMethods
+} from "./types.js";
 
 export class Logger {
 	/** The console the messages are written to */

@@ -1,4 +1,5 @@
 import * as Colorette from "colorette";
+
 import type { LoggerStyleResolvable } from "../types.js";
 
 /**

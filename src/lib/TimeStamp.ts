@@ -1,6 +1,7 @@
 import { Timestamp } from "@sapphire/timestamp";
-import type { LoggerTimestampOptions } from "../types.js";
 import * as colorette from "colorette";
+
+import type { LoggerTimestampOptions } from "../types.js";
 import { Style } from "./Style.js";
 
 /**

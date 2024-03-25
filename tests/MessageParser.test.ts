@@ -1,4 +1,5 @@
 import { inspect } from "node:util";
+
 import { MessageParser } from "../src/lib/MessageParser.js";
 
 function isClass(input: unknown) {

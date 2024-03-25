@@ -1,7 +1,8 @@
+import { Timestamp } from "@sapphire/timestamp";
 import { dim } from "colorette";
+
 import { Style } from "../src/lib/Style.js";
 import { TimeStamp } from "../src/lib/TimeStamp.js";
-import { Timestamp } from "@sapphire/timestamp";
 
 function isClass(input: unknown) {
 	return typeof input === "function" && typeof input.prototype === "object";

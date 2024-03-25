@@ -1,5 +1,6 @@
 import type * as Colorette from "colorette";
-import { Style } from "./lib/Style.js";
+
+import type { Style } from "./lib/Style.js";
 
 export enum LogLevel {
 	/**
