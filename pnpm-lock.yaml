@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^0.25.13
     version: 0.25.13(typescript@5.4.5)
   typedoc-json-parser:
-    specifier: ^9.0.1
-    version: 9.0.1
+    specifier: ^10.0.0
+    version: 10.0.0
   typescript:
     specifier: 5.4.5
     version: 5.4.5
@@ -3639,15 +3639,15 @@ packages:
       possible-typed-array-names: 1.0.0
     dev: true
 
-  /typedoc-json-parser@9.0.1:
-    resolution: {integrity: sha512-hvoISd8CMLn4iDXVebaUq32urRjoVtXMsZ1X2bmW1kaQolvVYZRw6NKXOdB1cLKzAxVWN9eHlg6HRduCCsfP7g==}
-    engines: {node: '>=18.17.0', npm: '>=6'}
+  /typedoc-json-parser@10.0.0:
+    resolution: {integrity: sha512-VuOE8dTIrWCu/HhQKp3mVGINirbGR9PUevfdFqDEYNxyTodU7gEvXx3711qKmTGyHZokzJKW6i4oJyI+v/7iIQ==}
+    engines: {node: '>=20', npm: '>=6'}
     hasBin: true
     dependencies:
       '@favware/colorette-spinner': 1.0.1
       '@sapphire/node-utilities': 1.0.2
       colorette: 2.0.20
-      commander: 11.1.0
+      commander: 12.0.0
       js-yaml: 4.1.0
       tslib: 2.6.2
       typedoc: 0.25.13(typescript@5.4.5)
