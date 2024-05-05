@@ -41,7 +41,7 @@
 		"@snowcrystals/eslint-config": "^1.0.2",
 		"@snowcrystals/prettier-config": "^1.0.0",
 		"@types/node": "^20.12.8",
-		"eslint": "^8.57.0",
+		"eslint": "^9.2.0",
 		"husky": "^9.0.11",
 		"is-ci": "^3.0.1",
 		"lint-staged": "^15.2.2",
