@@ -40,7 +40,7 @@
 		"@sapphire/ts-config": "^5.0.1",
 		"@snowcrystals/eslint-config": "^1.0.2",
 		"@snowcrystals/prettier-config": "^1.0.0",
-		"@types/node": "^20.14.2",
+		"@types/node": "^20.14.8",
 		"eslint": "^8.57.0",
 		"husky": "^9.0.11",
 		"is-ci": "^3.0.1",
@@ -48,9 +48,9 @@
 		"pinst": "^3.0.0",
 		"prettier": "^3.3.2",
 		"tsup": "^8.1.0",
-		"typedoc": "^0.25.13",
+		"typedoc": "^0.26.1",
 		"typedoc-json-parser": "^10.0.0",
-		"typescript": "5.4.5",
+		"typescript": "5.5.2",
 		"vitest": "^1.6.0"
 	},
 	"engines": {
