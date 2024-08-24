@@ -36,7 +36,7 @@
 		"colorette": "^2.0.20"
 	},
 	"devDependencies": {
-		"@favware/cliff-jumper": "^3.0.3",
+		"@favware/cliff-jumper": "^4.1.0",
 		"@sapphire/ts-config": "^5.0.1",
 		"@snowcrystals/eslint-config": "^1.0.2",
 		"@snowcrystals/prettier-config": "^1.0.0",
