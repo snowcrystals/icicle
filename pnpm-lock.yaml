@@ -9,8 +9,8 @@ overrides:
 
 dependencies:
   '@sapphire/timestamp':
-    specifier: ^1.0.4
-    version: 1.0.4
+    specifier: ^1.0.5
+    version: 1.0.5
   colorette:
     specifier: ^2.0.20
     version: 2.0.20
@@ -780,8 +780,8 @@ packages:
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
     dev: true
 
-  /@sapphire/timestamp@1.0.4:
-    resolution: {integrity: sha512-5X4tw4YwO48GAHCuUusu0kKpqEmd7fmYB4qYA/fcO959nDGUrzuL804/6ZSx2KMUGmZMccn/RgsXdCIOWwVuqw==}
+  /@sapphire/timestamp@1.0.5:
+    resolution: {integrity: sha512-oNwWyNdbt5wm4aYZvlHl1+64U3g0xrFmRIHsnER7RgMxNnp/wmAE4yTK2oUHeadg3t4V9iYctPAQCF+aINke4g==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
     dev: false
 
